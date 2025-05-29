@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TaskService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">patch</a> &gt; <a href="index.source.html" class="el_package">electiva5.parcial3.ms.patch.service</a> &gt; <span class="el_source">TaskService.java</span></div><h1>TaskService.java</h1><pre class="source lang-java linenums">package electiva5.parcial3.ms.patch.service;
+
+import java.util.Optional;
+
+import org.springframework.stereotype.Service;
+
+import electiva5.parcial3.ms.patch.dto.TaskUpdateRequest;
+import electiva5.parcial3.ms.patch.model.Task;
+import electiva5.parcial3.ms.patch.repository.TaskRepository;
+import lombok.RequiredArgsConstructor;
+
+@Service
+@RequiredArgsConstructor
+public class TaskService
+        implements ITaskService {
+    private final TaskRepository taskRepository;
+
+    @Override
+    public Optional&lt;Task&gt; getTaskById(Long id) {
+<span class="fc bfc" id="L20" title="All 2 branches covered.">        return taskRepository.findById(id).filter(task -&gt; !task.isDeleted());</span>
+    }
+
+    @Override
+    public Task updateTask(Long id, TaskUpdateRequest updatedTask) {
+<span class="fc" id="L25">        Task existing = Optional.of(taskRepository.findById(id))</span>
+<span class="fc bfc" id="L26" title="All 2 branches covered.">                .flatMap(opt -&gt; opt.filter(task -&gt; !task.isDeleted()))</span>
+<span class="fc" id="L27">                .orElseThrow(() -&gt; new RuntimeException(&quot;Task not found&quot;));</span>
+
+<span class="fc" id="L29">        Optional.ofNullable(updatedTask.getTitle())</span>
+<span class="fc" id="L30">                .ifPresent(existing::setTitle);</span>
+
+<span class="fc" id="L32">        Optional.ofNullable(updatedTask.getDescription())</span>
+<span class="fc" id="L33">                .ifPresent(existing::setDescription);</span>
+
+<span class="fc" id="L35">        Optional.ofNullable(updatedTask.getStatus())</span>
+<span class="fc" id="L36">                .ifPresent(existing::setStatus);</span>
+
+<span class="fc" id="L38">        return taskRepository.save(existing);</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

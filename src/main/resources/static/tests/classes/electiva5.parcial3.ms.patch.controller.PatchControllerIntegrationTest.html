@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - PatchControllerIntegrationTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>PatchControllerIntegrationTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/electiva5.parcial3.ms.patch.controller.html">electiva5.parcial3.ms.patch.controller</a> &gt; PatchControllerIntegrationTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">2</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.531s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="tab-container">
+<ul class="tabLinks">
+<li>
+<a href="#">Tests</a>
+</li>
+<li>
+<a href="#">Standard output</a>
+</li>
+</ul>
+<div class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">testUpdateTaskIntegration()</td>
+<td class="success">0.518s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testUpdateTaskNotFoundIntegration()</td>
+<td class="success">0.013s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2025-05-29T11:16:13.569-05:00  INFO 9752 --- [patch] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [electiva5.parcial3.ms.patch.controller.PatchControllerIntegrationTest]: PatchControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-05-29T11:16:13.589-05:00  INFO 9752 --- [patch] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration electiva5.parcial3.ms.patch.PatchApplication for test class electiva5.parcial3.ms.patch.controller.PatchControllerIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.0)
+
+2025-05-29T11:16:13.645-05:00  INFO 9752 --- [patch] [    Test worker] e.p.m.p.c.PatchControllerIntegrationTest : Starting PatchControllerIntegrationTest using Java 21.0.7 with PID 9752 (started by Alejo in C:\Users\Alejo\Code\Eam\SemestreVII\ElectivaV\parcial3-kubernetes\patch)
+2025-05-29T11:16:13.645-05:00  INFO 9752 --- [patch] [    Test worker] e.p.m.p.c.PatchControllerIntegrationTest : The following 1 profile is active: &quot;test&quot;
+2025-05-29T11:16:13.826-05:00  INFO 9752 --- [patch] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-29T11:16:13.835-05:00  INFO 9752 --- [patch] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 1 JPA repository interface.
+2025-05-29T11:16:13.908-05:00  INFO 9752 --- [patch] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-29T11:16:13.911-05:00  INFO 9752 --- [patch] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-29T11:16:13.922-05:00  INFO 9752 --- [patch] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-29T11:16:13.923-05:00  INFO 9752 --- [patch] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-05-29T11:16:13.924-05:00  INFO 9752 --- [patch] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=TASKPATCHUSER
+2025-05-29T11:16:13.924-05:00  INFO 9752 --- [patch] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-05-29T11:16:13.925-05:00  WARN 9752 --- [patch] [    Test worker] org.hibernate.dialect.Dialect            : HHH000511: The 2.3.232 version for [org.hibernate.dialect.MariaDBDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 10.4.0. Check the community dialects project for available legacy versions.
+2025-05-29T11:16:13.925-05:00  WARN 9752 --- [patch] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-29T11:16:13.925-05:00  INFO 9752 --- [patch] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-29T11:16:13.959-05:00  INFO 9752 --- [patch] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: drop table if exists tasks
+Hibernate: create table tasks (created_at datetime(6) not null, deleted_at datetime(6), id bigint not null auto_increment, updated_at datetime(6), description varchar(255), title varchar(255), status enum ('COMPLETED','IN_PROGRESS','PENDING'), primary key (id)) engine=InnoDB
+2025-05-29T11:16:13.963-05:00  INFO 9752 --- [patch] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-29T11:16:14.003-05:00  WARN 9752 --- [patch] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-29T11:16:14.083-05:00  INFO 9752 --- [patch] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-05-29T11:16:14.083-05:00  INFO 9752 --- [patch] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-05-29T11:16:14.085-05:00  INFO 9752 --- [patch] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2025-05-29T11:16:14.098-05:00  INFO 9752 --- [patch] [    Test worker] e.p.m.p.c.PatchControllerIntegrationTest : Started PatchControllerIntegrationTest in 0.505 seconds (process running for 6.07)
+Hibernate: select t1_0.id,t1_0.created_at,t1_0.deleted_at,t1_0.description,t1_0.status,t1_0.title,t1_0.updated_at from tasks t1_0
+Hibernate: insert into tasks (created_at,deleted_at,description,status,title,updated_at) values (?,?,?,?,?,?)
+Hibernate: select t1_0.id,t1_0.created_at,t1_0.deleted_at,t1_0.description,t1_0.status,t1_0.title,t1_0.updated_at from tasks t1_0 where t1_0.id=?
+Hibernate: update tasks set deleted_at=?,description=?,status=?,title=?,updated_at=? where id=?
+Hibernate: select t1_0.id,t1_0.created_at,t1_0.deleted_at,t1_0.description,t1_0.status,t1_0.title,t1_0.updated_at from tasks t1_0
+Hibernate: delete from tasks where id=?
+Hibernate: select t1_0.id,t1_0.created_at,t1_0.deleted_at,t1_0.description,t1_0.status,t1_0.title,t1_0.updated_at from tasks t1_0 where t1_0.id=?
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="https://www.gradle.org">Gradle 8.13</a> at May 29, 2025, 11:16:15 AM</p>
+</div>
+</div>
+</body>
+</html>
